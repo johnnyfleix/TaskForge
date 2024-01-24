@@ -1,0 +1,227 @@
+<!-- Include this in task-management.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Existing head content -->
+
+  <style>
+    /* Add your new styles here */
+
+    body {
+      font-family: 'Arial Black', 'Arial Bold', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #e6399b, #00adb5, #ff9500);
+      color: #fff;
+    }
+
+    header {
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      padding: 2em;
+    }
+
+    section {
+      padding: 2em;
+      text-align: center;
+    }
+
+    #task-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #tasks {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .task {
+      margin: 1em 0;
+      padding: 1em;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .task:hover {
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .task-details {
+      flex: 1;
+      text-align: left;
+    }
+
+    .task-actions {
+      margin-left: 1em;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    #task-summary {
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #task-filters {
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .filter {
+      background-color: #3498db;
+      color: white;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin: 0 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .filter:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Updated Body Content -->
+
+  <!-- Updated Header -->
+  <header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="flex: 1;">
+        <h1>TaskForge</h1>
+        <p>Discover a new era of task management</p>
+        <p><span style="font-style: italic; font-weight: bold;">Master your day, Every day.</span></p>
+      </div>
+      <!-- Add your logo here or specify the location -->
+      <img src="path/to/your/logo.png" alt="Your Logo" style="max-height: 100px; margin-right: 20px;">
+    </div>
+  </header>
+
+  <!-- Updated Task Form Modal -->
+  <div id="taskFormModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeTaskForm()">&times;</span>
+      <h2>Create Task</h2>
+      <form id="taskForm">
+        <!-- Existing form content -->
+
+        <button type="button" onclick="createTask()">Create Task</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Updated Task Management Section -->
+  <section id="task-container">
+    <div id="task-summary">
+      <h2>Task Summary</h2>
+      <!-- Add additional summary content or statistics here -->
+    </div>
+
+    <div id="task-filters">
+      <button class="filter" onclick="filterTasks('all')">All Tasks</button>
+      <button class="filter" onclick="filterTasks('high')">High Priority</button>
+      <button class="filter" onclick="filterTasks('due')">Due Soon</button>
+      <!-- Add more filters as needed -->
+    </div>
+
+    <ul id="tasks">
+      <!-- Existing and dynamically generated task items go here -->
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

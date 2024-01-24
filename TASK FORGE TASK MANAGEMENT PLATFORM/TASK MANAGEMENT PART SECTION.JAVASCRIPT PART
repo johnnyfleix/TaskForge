@@ -1,0 +1,80 @@
+// Include this in script.js
+// Existing JavaScript logic
+
+// Function to open task form modal with advanced animation
+function openTaskForm() {
+  const modal = document.getElementById('taskFormModal');
+  modal.style.display = 'flex'; // Use flex for centered alignment
+  modal.classList.add('animated');
+}
+
+// Function to close task form modal with advanced animation
+function closeTaskForm() {
+  const modal = document.getElementById('taskFormModal');
+  modal.classList.remove('animated');
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 500);
+}
+
+// Function to create a task (add your desired logic)
+function createTask() {
+  // Add your logic to handle task creation
+  // For demonstration, alert a success message
+  alert('Task created successfully!');
+  closeTaskForm();
+}
+
+// Function to filter tasks based on priority
+function filterTasks(priority) {
+  // Add your logic to filter tasks based on priority
+  // For demonstration, alert the selected priority
+  alert(`Filtering tasks by priority: ${priority}`);
+}
+
+// Updated function to fetch and display tasks
+function fetchAndDisplayTasks() {
+  const tasksContainer = document.getElementById('tasks');
+  // Add your logic to fetch tasks from the server and display them
+  // For demonstration, create dummy tasks
+  const dummyTasks = [
+    { title: 'Task 1', priority: 'high', dueDate: '2024-02-01' },
+    { title: 'Task 2', priority: 'medium', dueDate: '2024-02-10' },
+    { title: 'Task 3', priority: 'low', dueDate: '2024-02-15' },
+  ];
+
+  // Clear existing tasks
+  tasksContainer.innerHTML = '';
+
+  // Display dummy tasks
+  dummyTasks.forEach(task => {
+    const taskElement = document.createElement('li');
+    taskElement.className = 'task';
+    taskElement.innerHTML = `
+      <div class="task-details">
+        <h3>${task.title}</h3>
+        <p>Priority: ${task.priority}</p>
+        <p>Due Date: ${task.dueDate}</p>
+      </div>
+      <div class="task-actions">
+        <button onclick="editTask('${task.title}')">Edit</button>
+        <button onclick="deleteTask('${task.title}')">Delete</button>
+      </div>
+    `;
+    tasksContainer.appendChild(taskElement);
+  });
+}
+
+// Function to edit a task (add your desired logic)
+function editTask(title) {
+  // Add your logic to handle task editing
+  // For demonstration, alert the selected task for editing
+  alert(`Editing task: ${title}`);
+}
+
+// Function to delete a task (add your desired logic)
+function deleteTask(title) {
+  // Add your logic to handle task deletion
+  // For demonstration, alert the selected task for deletion
+  alert(`Deleting task: ${title}`);
+}
