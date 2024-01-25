@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ... (Existing head content) ... -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="device-width, initial-scale=1,o">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha384-GLhlTQ8iN17P6Lrl5O6U1nXVOxLl9a7l9+aZ4fF/G9mI5nIj5wP+x2ck+jXYD+D5" crossorigin="anonymous">
+  <link rel="stylesheet" href="public/css/styles.css">
+  <style>
+    /* ... (Existing styles) ... */
+
+    /* Additional Styles for Enhanced Design */
+    #company-overview {
+      background-color: #fff;
+      margin-top: 30px;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(to left, #e6399b, #00adb5, #ff9500);
+    }
+
+    #company-analytics {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      
+    }
+
+    .analytics-card {
+      flex: 1;
+      padding: 30px;
+      margin: 20px;
+      background-color: #3498db;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    .analytics-card:hover {
+      transform: scale(1.05);
+      background-color: #2980b9;
+    }
+
+    .analytics-card h3 {
+      margin-bottom: 15px;
+      font-family: 'Arial Black', sans-serif;
+      font-size: 1.8em;
+      color: #fff;
+    }
+
+    .analytics-card p {
+      font-size: 1.4em;
+      color: #ecf0f1;
+    }
+
+    .analytics-card i {
+      font-size: 2.5em;
+      color: #ecf0f1;
+    }
+
+    /* Additional Styles for Additional Features */
+    #additional-features {
+      margin-top: 30px;
+      padding: 40px;
+      border-radius: 12px;
+      background-color: #ecf0f1;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #additional-features h2 {
+      color: #333;
+      font-family: 'Arial Black', sans-serif;
+      font-size: 2.2em;
+      margin-bottom: 30px;
+    }
+
+    .feature {
+      flex: 1;
+      padding: 30px;
+      margin: 20px;
+      background-color: #3498db;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    .feature:hover {
+      transform: scale(1.05);
+      background-color: #2980b9;
+    }
+
+    .feature h3 {
+      margin-bottom: 15px;
+      font-family: 'Arial Black', sans-serif;
+      font-size: 1.8em;
+      color: #fff;
+    }
+
+    .feature p {
+      font-size: 1.4em;
+      color: #ecf0f1;
+    }
+
+    @media screen and (max-width: 768px) {
+      .analytics-card,
+      .feature {
+        flex: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ... (Existing body content) ... -->
+
+  <!-- Company Overview Section -->
+  <section id="company-overview">
+    <h2 style="color: #333; text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5em;">Company
+      Overview</h2>
+    <div id="company-analytics">
+      <!-- Placeholder Content: You can replace this with actual company-wide analytics -->
+      <div class="analytics-card">
+        <h3>Total Tasks</h3>
+        <p>256</p>
+        <p><i class="fas fa-tasks"></i></p>
+      </div>
+
+      <div class="analytics-card">
+        <h3>Completed Tasks</h3>
+        <p>168</p>
+        <p><i class="fas fa-check-circle"></i></p>
+      </div>
+
+      <div class="analytics-card">
+        <h3>Overdue Tasks</h3>
+        <p>12</p>
+        <p><i class="fas fa-exclamation-circle"></i></p>
+      </div>
+
+      <div class="analytics-card">
+        <h3>Team Productivity</h3>
+        <p>75%</p>
+        <p><i class="fas fa-chart-line"></i></p>
+      </div>
+
+      <!-- Add more analytics cards as needed -->
+
+      <div class="analytics-card">
+        <h3>Team Members</h3>
+        <p>30</p>
+        <p><i class="fas fa-users"></i></p>
+      </div>
+
+      <div class="analytics-card">
+        <h3>Project Completion Rate</h3>
+        <p>85%</p>
+        <p><i class="fas fa-chart-pie"></i></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Features Section -->
+  <section id="additional-features" style="background: linear-gradient(to left, #e6399b, #00adb5, #ff9500)">
+    <h2 style="color: #333; text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5em;">Additional
+      Features</h2>
+    <div id="additional-features-list">
+      <!-- Feature 1 -->
+      <div class="feature">
+        <h3>Team Engagement</h3>
+        <p>Measure and enhance team engagement with interactive charts and feedback mechanisms.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature">
+        <h3>Task Efficiency</h3>
+        <p>Analyze task completion times and optimize workflows for better efficiency.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature">
+        <h3>Collaboration Insights</h3>
+        <p>Visualize collaboration patterns and identify key contributors within your teams.</p>
+      </div>
+
+      <!-- Add more features as needed -->
+
+      <div class="feature">
+        <h3>Custom Reports</h3>
+        <p>Create and generate custom reports tailored to your company's unique requirements.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Task Dependencies</h3>
+        <p>Establish dependencies between tasks for better project planning and execution.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Resource Allocation</h3>
+        <p>Optimize resource allocation with visual representations of team workloads.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ... (Existing scripts) ... -->
+</body>
+
+</html>
