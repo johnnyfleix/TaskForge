@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add an event listener to the form for submission
     taskForm.addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
+
+     // Set the background color of the taskList section
+     taskList.style.backgroundColor = '#3498db';
+     taskList.style.color = '#010001';
     
     // Get the values from the form inputs
     const taskDescription = document.getElementById('taskDescription').value;
@@ -18,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const taskItem = document.createElement('div');
     taskItem.classList.add('task');
     taskItem.innerHTML = `
-    <p>Task: ${taskDescription}</p>
-    <p>Importance: ${importanceLevel}</p>
-    <p>Deadline: ${deadline}</p>
+    <p style="margin-bottom: 8px;" >Task: ${taskDescription}</p>
+    <p style="margin-bottom: 8px;">Importance: ${importanceLevel}</p>
+    <p style="margin-bottom: 8px;">Deadline: ${deadline}</p>
     `;
     
     // Add the task item to the task list
